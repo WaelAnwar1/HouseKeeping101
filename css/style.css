@@ -1,0 +1,522 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    
+}
+
+
+:root
+{
+    --topHeader:#ecf6fe;
+    --blueColor:#008aff;
+    --yellowColor:#ffe824;
+    --goldColor:#f7b74d;
+    --headingColor:#13287e;
+    --textColor:#474747;
+    --whiteColor:#ffffff;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    /* font-family: 'Roboto', sans-serif; */
+    font-size: 62.5%;
+    font-weight: 400;
+    scroll-behavior: smooth;
+}   
+
+
+ul{
+    list-style: none;
+}
+
+
+a{
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+h1, h2, h3 
+{
+    text-transform: uppercase;
+}
+
+h2{
+    font-size: 3rem;
+    font-weight: 400;
+    color: var(--headingColor);
+}
+
+@media (max-width: 768px)
+{
+    h2{
+        font-size: 3.3rem;
+    }
+    h3{
+        font-weight: 400;
+    }
+    p{
+        font-size: 1.8rem;
+        font-weight: normal;
+        line-height: 1.6;
+        color: var(--textColor);
+    }
+}
+
+@media (max-width: 768px)
+{
+    p{
+        font-size: 2rem;
+    }
+}
+
+section{
+    padding: 6rem 0;
+}
+
+.btn {
+    background-color: var(--yellowColor);
+    color: var(--textColor);
+    text-transform: uppercase;
+    font-size: 1.4rem;
+    padding: 1.6rem 2rem;
+    border-radius: 2.1rem;
+}
+
+.btn:hover{
+    box-shadow: 0 0.5rem 0.5rem -0.4rem rgba(0 0 0 /.5);
+    transform: scale(1.1);
+}
+
+/****** Container ************/
+
+.container 
+{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*** Small Screen ****/
+@media(min-width: 576px)
+{
+    .container{
+        width: 540px;
+    }
+}
+
+/*** Medium Screen ***/
+@media(min-width: 768px)
+{
+    .container{
+        width: 750px;
+    }
+}
+
+/*** Large Screen ***/
+@media(min-width: 992px)
+{
+    .container{
+        width: 960px;
+    }
+}
+
+/*** X-Large Screen ***/
+@media(min-width: 1200px)
+{
+    .container{
+        width: 1170px;
+    }
+}
+
+/*** XX-Large Screen ***/
+@media(min-width: 1400px)
+{
+    .container{
+        width: 1320px;
+    }
+}
+
+
+
+/******************/
+header 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--topHeader);
+    padding: 1.5rem 0;
+    z-index: 1000;
+}
+
+
+
+header .container 
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+header .container .menu-bar
+{
+    font-size: 1.6rem;
+    color: var(--headingColor);
+    cursor: pointer;
+}
+
+
+header .container nav
+{
+    position: absolute;
+    top: -100rem;
+    left: 0;
+    width: 100%;
+    background-color: var(--topHeader);
+    padding: 1.6rem;
+}
+
+header .container nav.active
+{
+    top: 6.9rem;
+}
+
+
+header .container nav ul li 
+{
+    padding-bottom: 1rem;     
+}
+
+
+
+header .container nav ul li a
+{
+    display: block;
+    text-transform: capitalize;
+    font-size: 1.6rem;
+    color: var(--blueColor);
+    padding: 1.2rem 2.6rem;
+    border-radius: 2rem;
+}
+
+
+
+header .container nav ul li a.active,
+header .container nav ul li a:hover
+{
+    background-color: var(--blueColor);
+    color: var(--whiteColor);
+}
+
+
+
+@media (max-width: 992px)
+{
+    header .container{
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 992px)
+{
+    header{
+        padding: 0;
+    }
+    header .container .menu-bar{
+        display: none;
+    }
+    header .container nav{
+        position: relative;
+        left: auto;
+        top: auto;
+        width: auto;
+        padding: 1rem 0;
+    }
+    header .container nav ul{
+        display: flex;
+        align-items: center;
+        column-gap: 1rem;
+    }
+    header .container nav ul li {
+        padding-bottom: 0;
+    }
+}
+
+
+.home{
+    background-color: #f4faff;
+    height: 100vh;
+}
+
+.home .container{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home .container .home-text
+{
+    text-align: center;
+}
+
+.home .container .home-text h2
+{
+    font-weight: 300;
+    font-size: 2.3rem;
+    color: var(--blueColor);
+}
+
+.home .container .home-text h1
+{
+    color: var(--headingColor);
+    font-size: 5.8rem;
+    margin: 3rem;
+}
+
+.home .container .home-text p
+{
+    max-width: 67.3rem;
+    margin-bottom: 4rem;
+}
+
+.home .container .home-img
+{
+    display: none;
+}
+
+@media (max-width: 768px)
+{
+    .home .container {
+        justify-content: flex-start;
+    }
+    .home .container .home-text{
+        text-align: left;
+    }
+    .home .container .home-text h2{
+        font-size: 3.3rem;
+    }
+    .home .container .home-text h1{
+        font-size: 6.8rem;
+    }
+}
+
+
+@media (min-width: 992px)
+{
+    .home .container .home-img
+    {
+        display: flex;
+    }
+    .home .container .home-img img
+    {
+        height: 69.7rem;
+    }
+}
+
+
+@media (min-width: 1024px)
+{
+    .home{
+        padding-top: 12rem;
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .home{
+        padding-top: 8rem;
+    }
+}
+
+
+
+.services
+{
+    position: relative;
+    border-bottom: 0.2rem solid #f0f0f0;
+}
+
+.services .container
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(30rem, 100%), 1fr));
+}
+
+.services .container .serv-box
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.services .container .serv-box .serv-heading
+{
+    text-align: center;
+}
+
+
+.services .container .serv-box .serv-heading h3
+{
+    font-size: 3.3rem;
+    color: var(--blueColor);
+}
+
+
+.services .container .serv-box .serv-heading h4
+{
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--textColor);
+    text-transform: uppercase;
+}
+
+.services .container .serv-box .serv-img img
+{
+    max-width: 100%;
+}
+
+.services .container .serv-box p
+{
+    max-width: 51.5rem;
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+}
+
+.services .container .serv-box .list
+{
+    margin-bottom: 5rem;
+}
+
+.services .container .serv-box .list ul li
+{
+    position: relative;
+    font-size: 1.6rem;
+    font-weight: 300;
+    color: var(--blueColor);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+    margin-left: 1rem;
+}
+
+.services .container .serv-box .list ul li::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -1rem;
+}
+
+.services .container .serv-box a 
+{
+    max-width: 21.6rem;
+    margin: auto;
+    margin-bottom: 5rem;
+}
+
+.services .like{
+    display: none;
+}
+
+
+@media (min-width: 768px)
+{
+    .services .container .serv-box .list{
+        display: flex;
+        gap: 2rem;
+    }
+    .services .container .serv-box .serv-img{
+        text-align: center;
+    }
+    .services .container .serv-box p{
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .services .like{
+        position: absolute;
+        bottom: -8rem;
+        left: calc(50% -15rem/2);
+        width: 15rem;
+        height: 15rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: var(--whiteColor);
+        box-shadow: 0 0.5rem 0.5rem rgba(0 0 0 /20%), 0.1rem 0 1rem rgba(0 0 0 /20%);
+    }
+    .services .like i{
+        color: var(--blueColor);
+        font-size: 3rem;
+    }
+}
+
+@media (min-width: 992px)
+{
+    .services .container .serv-box .list{
+        justify-content: space-between;
+
+    }
+}
+
+@media (min-width: 1200px)
+{
+    .services .container .serv-box .list{
+        display: flex;
+        justify-content: space-between;
+    }
+    .services .container .serv-box:nth-child(1) .serv-img{
+        text-align: left;
+    }
+    .services .container .serv-box:nth-child(2) .serv-img{
+        text-align: right;
+    }
+    .services .container .serv-box:nth-child(1) .list{
+        padding-right: 4rem;
+    }
+    .services .container .serv-box:nth-child(2) .list{
+        padding-left: 4rem;
+    }
+    .services .container .serv-box p{
+        text-align: left;
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .services .container .serv-box:nth-child(2) p
+    {
+        margin-left: auto;
+    }
+    .services .container .serv-box .list ul li {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1400px)
+{
+    .services .container .serv-box:nth-child(2) .list{
+        padding-left: 11rem;
+    }
+}
+
+/******************/
+
+/******************/
+
+/******************/
+
+/******************/
+
+
+
+
